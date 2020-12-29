@@ -24,6 +24,9 @@ public class ActivationNotification {
 		@JsonProperty("activationId")
 	    private Long activationId;
 		
+		@JsonProperty("orderId")
+	    private Long orderId;
+		
 		@JsonProperty("serviceList")
 	    private List<Services> serviceList;
 
@@ -57,6 +60,14 @@ public class ActivationNotification {
 
 		public void setServiceList(List<Services> serviceList) {
 			this.serviceList = serviceList;
+		}
+
+		public Long getOrderId() {
+			return orderId;
+		}
+
+		public void setOrderId(Long orderId) {
+			this.orderId = orderId;
 		}
 		
 		

@@ -47,7 +47,7 @@ public class EmployeeService {
      
     public ActivationNotification createOrUpdateEmployee(ActivationNotification entity) throws RecordNotFoundException
     {
-    	List<ActivationNotificationEntity> activationList = activeNotificationRepository.getActivationNotificationsById(entity.getActivationId());
+    	List<ActivationNotificationEntity> activationList = activeNotificationRepository.getActivationNotificationsByOrderId(entity.getOrderId());
        if(activationList.size() > 0) {
     	   for(ActivationNotificationEntity obj:activationList) {
     		   activeNotificationRepository.updateNotificationStatus(entity.getActivationStatus(),obj.getId());

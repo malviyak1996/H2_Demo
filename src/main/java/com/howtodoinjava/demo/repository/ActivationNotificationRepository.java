@@ -18,8 +18,8 @@ import com.howtodoinjava.demo.model.EmployeeEntity;
 
 public interface ActivationNotificationRepository extends JpaRepository<ActivationNotificationEntity, Long> {
 
-	 @Query("SELECT t FROM ActivationNotificationEntity t WHERE t.id in (:activationNotificationId)")
-	  List<ActivationNotificationEntity> getActivationNotificationsById(Long activationNotificationId);
+	 @Query("SELECT t FROM ActivationNotificationEntity t WHERE t.orderId in (:orderId)")
+	  List<ActivationNotificationEntity> getActivationNotificationsByOrderId(Long orderId);
 	 
 	 @Modifying
 	  @Transactional

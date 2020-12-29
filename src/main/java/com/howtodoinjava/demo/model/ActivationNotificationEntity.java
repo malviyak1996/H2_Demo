@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ACTIVATION_NOTIFICATION ")
+@Table(name="ACTIVATION_NOTIFICATION")
 public class ActivationNotificationEntity {
 
 	@Id
@@ -20,6 +20,9 @@ public class ActivationNotificationEntity {
     
     @Column(name="activation_status")
     private String activationStatus;
+    
+    @Column(name="order_id")
+    private Long orderId;
     
 
 	public Long getId() {
@@ -44,6 +47,14 @@ public class ActivationNotificationEntity {
 
 	public void setActivationStatus(String activationStatus) {
 		this.activationStatus = activationStatus;
+	}
+
+	public Long getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(Long orderId) {
+		this.orderId = orderId;
 	}
     
     
